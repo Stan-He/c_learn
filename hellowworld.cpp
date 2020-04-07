@@ -1,5 +1,6 @@
 #include <iostream>
 #include "Obj.h"
+#include "Shape.h"
 using namespace std;
 
 
@@ -27,5 +28,10 @@ int main(){
     catch(const char*s){
         puts(s);
     }
+
+    smart_ptr<shape> ptr1(new circle());
+    printf("use count of ptr1 is %ld\n",ptr1.use_count());
+
+
     return 0;
 }
